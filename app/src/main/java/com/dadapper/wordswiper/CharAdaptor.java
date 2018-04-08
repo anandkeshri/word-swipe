@@ -1,6 +1,8 @@
 package com.dadapper.wordswiper;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,10 +38,11 @@ public class CharAdaptor extends BaseAdapter {
             textView = new TextView(mContext);
             textView.setLayoutParams(new GridView.LayoutParams(200,200));
             textView.setPadding(25,10,8,8);
-            textView.setTextSize(20);
+            textView.setTextSize(40);
             textView.setBackgroundResource(android.R.color.holo_orange_light);
             textView.setGravity(Gravity.CENTER);
-            textView.setTextAppearance();
+         //   textView.setTextAppearance(android.R.style.TextAppearance);
+            textView.setTextColor(Color.rgb(255,255,255));
         }
         else
         {
