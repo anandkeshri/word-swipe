@@ -39,7 +39,7 @@ public class CharAdaptor extends BaseAdapter {
             textView.setTextSize(20);
             textView.setBackgroundResource(android.R.color.holo_orange_light);
             textView.setGravity(Gravity.CENTER);
-            textView.setTextAppearance();
+
         }
         else
         {
