@@ -8,6 +8,7 @@ import android.widget.GridView;
 
 import com.dadapper.wordswiper.CharAdaptor;
 import com.dadapper.wordswiper.Dictionary.WordDictionary;
+import com.dadapper.wordswiper.Scoring.Score;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,6 +23,7 @@ public class GamePlayActivityEventHandler implements EventHandler {
     private GridView gridview;
     private CharAdaptor charAdaptor;
     private WordDictionary dictionary;
+    private int totalScore;
 
     public GamePlayActivityEventHandler(GridView gridview, Context context, WordDictionary dictionary)
     {
@@ -31,6 +33,7 @@ public class GamePlayActivityEventHandler implements EventHandler {
         this.charAdaptor = new CharAdaptor(context);
         this.wordList = new ArrayList<>();
         this.dictionary = dictionary;
+        this.totalScore = 0;
     }
     @Override
     public void actionDown(View v, MotionEvent event)
@@ -60,9 +63,13 @@ public class GamePlayActivityEventHandler implements EventHandler {
         print(word);
         if(dictionary.containsWord(word) && !wordList.contains(createWordString(word))) {
             wordList.add(createWordString(word));
+            int score = (new Score()).wordScore(createWordString(word));
+            this.totalScore = this.totalScore + score;
         }
+
         System.out.println("Found word List: ");
         print(wordList);
+        System.out.println("current Score: " + totalScore);
         word.clear();
         hash.clear();
     }

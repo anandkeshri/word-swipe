@@ -2,7 +2,6 @@ package com.dadapper.wordswiper;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.os.Build;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,17 +62,106 @@ public class CharAdaptor extends BaseAdapter {
         String vowels = "AEIOU";
         String consonants = "BCDFGHJKLMNPQRSTVWXYZ";
         Random rand = new Random();
-        for(int i = 0 ; i<16;i++)
+//        for(int i = 0 ; i<16;i++)
+//        {
+//            if(rand.nextInt(2)==0)
+//            {
+//                int idx = rand.nextInt(5);
+//                text.add(String.valueOf(vowels.charAt(idx)));
+//            }
+//            else
+//            {
+//                int idx = rand.nextInt(21);
+//                text.add(String.valueOf(consonants.charAt(idx)));
+//            }
+//        }
+        for(int i = 0; i < 16; i++)
         {
-            if(rand.nextInt(2)==0)
+            int idx = rand.nextInt(9408);
+            if(idx <= 816)
             {
-                int idx = rand.nextInt(5);
-                text.add(String.valueOf(vowels.charAt(idx)));
+                text.add("A");
             }
-            else
+            else if(idx <= 965)
             {
-                int idx = rand.nextInt(21);
-                text.add(String.valueOf(consonants.charAt(idx)));
+                text.add("B");
+            }
+            else if(idx <= 1243)
+            {
+                text.add("C");
+            }
+            else if(idx <= 1688)
+            {
+                text.add("D");
+            }
+            else if(idx <= 2958)
+            {
+                text.add("E");
+            }
+            else if(idx <= 3180)
+            {
+                text.add("F");
+            }
+            else if(idx <= 3381)
+            {
+                text.add("G");
+            }else if(idx <= 3990)
+            {
+                text.add("H");
+            }else if(idx <= 4086)
+            {
+                text.add("I");
+            }else if(idx <= 4101)
+            {
+                text.add("J");
+            }else if(idx <= 4178)
+            {
+                text.add("K");
+            }else if(idx <= 4580)
+            {
+                text.add("L");
+            }else if(idx <= 4820)
+            {
+                text.add("M");
+            }else if(idx <= 5494)
+            {
+                text.add("N");
+            }else if(idx <= 6244)
+            {
+                text.add("O");
+            }else if(idx <= 6436)
+            {
+                text.add("P");
+            }else if(idx <= 6445)
+            {
+                text.add("Q");
+            }else if(idx <= 7043)
+            {
+                text.add("R");
+            }else if(idx <= 7675)
+            {
+                text.add("S");
+            }else if(idx <= 8580)
+            {
+                text.add("T");
+            }else if(idx <= 8855)
+            {
+                text.add("U");
+            }else if(idx <= 8952)
+            {
+                text.add("V");
+            }else if(idx <= 9188)
+            {
+                text.add("W");
+            }else if(idx <= 9203)
+            {
+                text.add("X");
+            }else if(idx <= 9400)
+            {
+                text.add("Y");
+            }else if(idx <= 9407)
+            {
+                text.add("Z");
             }
         }
         System.out.print("setting text - ");
